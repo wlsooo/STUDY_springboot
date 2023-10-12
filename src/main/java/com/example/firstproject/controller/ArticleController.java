@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ArticleController {
     @Autowired  // 스프링 부트가 미리 생성해 놓은 리파지터리 객체 주입(DI)
     private ArticleRepository articleRepository;
-    @GetMapping("/articles/new")
+    @GetMapping("/articles/new")    //인터넷 서버 접속 주소 ex) air라면 .../air
     public String newArticleForm() {
         return "articles/new";
-    }
+    }   //mastache에서 가져올 파일 이름
 
     @PostMapping("/articles/create")
     public String createArticle(ArticleForm form) {
